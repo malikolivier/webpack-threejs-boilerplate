@@ -1,0 +1,24 @@
+{
+  "name": "webpack-threejs-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently -k -p \"[{name}]\" -n \"Webpack,HTTP-Server\" -c \"cyan.bold,green.bold\"  \"npm run watch\" \"npm run serve\"",
+    "watch": "webpack --progress --watch",
+    "serve": "http-server ./dist -o",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "http-server": "^0.11.1",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
+  },
+  "dependencies": {
+    "three": "^0.91.0"
+  }
+}
